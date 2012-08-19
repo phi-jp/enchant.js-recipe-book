@@ -4,14 +4,6 @@
 
 @import "lib/tmlib.less/tmlib.less";
 
-* {
-  margin: 0px;
-  padding: 0px;
-  #tm .box-sizing(border-box);
-  font-family: "Meiryo", Arial, Helvetica, sans-serif;
-  line-height: 1.5em;
-}
-
 
 /*
  * const
@@ -20,17 +12,26 @@
 @key-color: rgb(250, 250, 250);
 @bg-color: @key-color;
 
+@chapter-nav-width: 25%;
+@main-width: 35%;
+@preview-width: 100% - @chapter-nav-width - @main-width;
+
 
 /*
  * reset
  */
 * {
-  
+  margin: 0px;
+  padding: 0px;
+  #tm .box-sizing(border-box);
+  line-height: 1.5em;
 }
 
 
 body {
   background-color: @key-color;
+  font-family: "Meiryo", Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 
@@ -84,7 +85,6 @@ body {
     li {
       float: left;
       text-align: center;
-      font-size: 15px;
       border-left: 1px solid hsl(0, 0%, 75%);
       
       a {
@@ -126,15 +126,41 @@ body {
   box-shadow: 0px 0px 8px 0px #aaa;
 }
 
+/*
+ * chapter-nav
+ */
+#chapter-nav {
+  float: left;
+  width: @chapter-nav-width;
+  padding: 20px;
+  
+  .wrap {
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px;
+    
+    h2 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    
+    border: 1px solid #aaa;
+    ul {
+      list-style: none;
+      li {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
 
 /*
  * main
  */
-
-
 #main {
   float: left;
-  width: 550px;
+  width: @main-width;
   padding: 20px;
   
   .chapter {
@@ -152,7 +178,6 @@ body {
     }
     
     p, ul, ol {
-      font-size: 15px;
       margin-bottom: 10px;
     }
     
@@ -180,8 +205,8 @@ body {
   
 
 #preview {
-  float: right;
-  width: 500px;
+  float: left;
+  width: @preview-width;
   padding: 20px;
   
   h1 {
@@ -193,8 +218,8 @@ body {
   #preview-frame {
     display: block;
     margin: 0px auto;
-    width: 465px;
-    height: 465px;
+    width: 400px;
+    height: 400px;
   }
 }
 
