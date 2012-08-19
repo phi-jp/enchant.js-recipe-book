@@ -12,8 +12,8 @@
 @key-color: rgb(250, 250, 250);
 @bg-color: @key-color;
 
-@chapter-nav-width: 25%;
-@main-width: 35%;
+@chapter-nav-width: 24%;
+@main-width: 36%;
 @preview-width: 100% - @chapter-nav-width - @main-width;
 
 
@@ -121,6 +121,7 @@ body {
 #wrap {
   #tm .clearfix;
   margin: 0px auto;
+  padding: 10px 0px;
   width: @global-width;
   background-color: white;
   box-shadow: 0px 0px 8px 0px #aaa;
@@ -161,6 +162,7 @@ body {
 #main {
   float: left;
   width: @main-width;
+  min-height: 560px;
   padding: 20px;
   
   .chapter {
