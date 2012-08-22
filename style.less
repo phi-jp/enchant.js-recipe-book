@@ -168,6 +168,12 @@ body {
   min-height: 560px;
   padding: 20px;
   
+  h1 {
+    a {
+      text-decoration: none;
+    }
+  }
+  
   .chapter {
     #tm .transition(500ms);
     
@@ -279,7 +285,40 @@ body {
 
 
 
-
+/*
+ * about
+ */
+#about {
+  #main {
+    width: 100%;
+    
+    #tm .clearfix;
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    .info-field {
+      width: 70%;
+      padding-right: 20px;
+      float: left;
+      
+      h1, h2, p {
+        margin-bottom: 10px;
+      }
+    }
+    
+    .image-field {
+      width: 30%;
+      float: right;
+      text-align: center;
+      
+      .img {
+        width: 100%;
+      }
+    }
+  }
+}
 
 
 
