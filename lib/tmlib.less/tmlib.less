@@ -104,6 +104,13 @@
     background:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
     background:         linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
   }
+  
+  .background-size(@value) {
+    -webkit-background-size: @value;
+       -moz-background-size: @value;
+         -o-background-size: @value;
+            background-size: @value;
+  }
 }
 
 
